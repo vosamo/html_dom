@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <p id="hello">Hello World!</p>
+        <p id="intro">This example introduce HTML DOM method</p>
+    <script>
+        <!--获取指定id的DOM节点-->
+        var x=document.getElementById('hello');
+        document.write("<p>The text from the intro paragraph: " + x.innerHTML + "</p>");
+
+        <!--创建新的p节点-->
+        var newNode=document.createElement("p");
+        <!--创建新的文本节点-->
+        var txt=document.createTextNode("This is a new dom object.");
+        <!--添加子节点-->
+        newNode.appendChild(txt);
+        <!--设置节点属性-->
+        newNode.setAttribute("id","newNode");
+        x.parentNode.appendChild(newNode);
+
+        <!--删除节点-->
+        var intro=document.getElementById("intro");
+        intro.parentNode.removeChild(intro);
+    </script>
+    </body>
+</html>
